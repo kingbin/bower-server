@@ -12,6 +12,14 @@ require 'json'
 require 'sequel'
 require 'sinatra/sequel'
 
+#require 'logger'
+
+apps=File.expand_path(File.dirname(__FILE__))
+#set :database, 'sqlite:/'
+set :database, "sqlite://#{apps}/db/bower.db.sqlite"
+#database.logger = Logger.new("#{apps}/log/db.log")
+puts "the packages table doesn't exist" if !database.table_exists?('packages')
+
 migration 'create packages' do
   database.create_table :packages do
     primary_key :id
@@ -19,7 +27,7 @@ migration 'create packages' do
     String :url, :unique => true, :null => false
     DateTime :created_at
     index :name
-  end
+ end
 end
 
 migration 'add hits' do
@@ -36,7 +44,8 @@ class Package < Sequel::Model
 
   def validate
     super
-    errors.add(:url, 'is not correct format') if url !~ /^git:\/\//
+#    errors.add(:url, 'is not correct format') if url !~ /^git:\/\//
+    errors.add(:url, 'is not correct format') if url !~ /^(git)|(https):\/\//
   end
 
   def as_json
