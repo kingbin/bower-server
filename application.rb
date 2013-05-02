@@ -15,6 +15,30 @@ require 'sinatra/sequel'
 #require 'padrino-helpers'
 #require 'logger'
 
+
+#require 'em-websocket'
+
+#EventMachine::WebSocket.start(:host => "0.0.0.0", :port => 9001) do |ws|
+#  ws.onopen { ws.send "ARMtech BOWERS R Upon U"}
+#
+#  ws.onmessage { |name|
+##    package  = Package[:name => params[:name]]
+##    p = "Not Found"
+##    if package?
+##      p = package.to_json
+##      package.hit!
+##    end
+##    ws.send "#{p}"
+#
+#    ws.send "Looking For: #{name}"
+#  }
+#  ws.onclose {
+#    puts "WebSocket closed"
+#  }
+#end
+
+
+
 require "rack/oauth2/sinatra"
 
 set :root_path, File.dirname(__FILE__)
@@ -45,10 +69,9 @@ class MyBower < Sinatra::Base
   #oauth_required "/packages"
 
 
-  get '/' do
-   @msg = "ARMtech Bower Server"
-   @date = Time.now
-   erb :index
+  get '/uni' do
+    @msg = "magical"
+    erb :unicorns
   end
 
   get '/' do

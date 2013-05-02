@@ -1,1 +1,23 @@
-<%= @msg %>
+  <%= @msg %>
+
+  <div id="debug"></div>
+  <div id="msg"></div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+
+    $(document).ready(function(){
+        function msgs(m){ $("#msgs").append($("<p>"+m+"</p>")); };
+
+        var Socket = "MozWebSocket" in window ? MozWebSocket : WebSocket;
+        var ws = new Socket("ws://blade-solr:9001/websocket");
+        ws.onmessage = function(evt) { $("#msg").append("<p>"+evt.data+"</p>"); };
+        ws.onclose = function() { msgs("socket closed"); };
+        ws.onopen = function() {
+          msgs("connected...");
+          ws.send("hello server");
+          ws.send("node");
+        };
+      });
+
+</script>
