@@ -2,6 +2,8 @@
 
 Full Sinatra App. I added support for http repos. I'm using this w apache & passenger.
 
+Future vision: Add support for hot loading resources to client from bower server. 
+
 ## Create package
 
     curl http://mycompany/packages -v -F 'name=jquery' -F 'url=git://github.com/jquery/jquery.git'
