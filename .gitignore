@@ -1,12 +1,11 @@
 development.db
 production.db
 
-<<<<<<< HEAD
 vendor/
 .bundle/
 node_modules/
 Gemfile.lock
-=======
+
 # ruby ignores
 
 *.gem
@@ -27,6 +26,4 @@ tmp
 .yardoc
 _yardoc
 doc/
-
->>>>>>> cd9f52d3af2d0164fb707f6ec038a766aeb15c34
 
