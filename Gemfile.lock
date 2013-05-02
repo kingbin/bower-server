@@ -53,7 +53,10 @@ PLATFORMS
 DEPENDENCIES
   em-websocket
   pg
+<<<<<<< HEAD
   rack-oauth2-server
+=======
+>>>>>>> cd9f52d3af2d0164fb707f6ec038a766aeb15c34
   racksh
   sequel
   sinatra
