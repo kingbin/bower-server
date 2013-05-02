@@ -1,0 +1,586 @@
+I, [2013-04-25T15:30:16.164977 #42891]  INFO -- : (0.000258s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:30:16.165119 #42891]  INFO -- : (0.000043s) PRAGMA case_sensitive_like = 1
+I, [2013-04-25T15:30:16.165298 #42891]  INFO -- : (0.000108s) SELECT NULL FROM `packages` LIMIT 1
+E, [2013-04-25T15:30:16.218825 #42891] ERROR -- : SQLite3::SQLException: table `packages` already exists: CREATE TABLE `packages` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` varchar(255) NOT NULL UNIQUE, `url` varchar(255) NOT NULL UNIQUE, `created_at` timestamp)
+I, [2013-04-25T15:31:53.151459 #42993]  INFO -- : (0.000263s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:31:53.151577 #42993]  INFO -- : (0.000027s) PRAGMA case_sensitive_like = 1
+I, [2013-04-25T15:31:53.151753 #42993]  INFO -- : (0.000106s) SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:31:54.539675 #42997]  INFO -- : (0.000615s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:31:54.539943 #42997]  INFO -- : (0.000068s) PRAGMA case_sensitive_like = 1
+I, [2013-04-25T15:31:54.540378 #42997]  INFO -- : (0.000261s) SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:32:33.211880 #43015]  INFO -- : (0.000507s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:32:33.212265 #43015]  INFO -- : (0.000060s) PRAGMA case_sensitive_like = 1
+I, [2013-04-25T15:32:33.212816 #43015]  INFO -- : (0.000315s) SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:32:34.441287 #43019]  INFO -- : (0.000616s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:32:34.441739 #43019]  INFO -- : (0.000073s) PRAGMA case_sensitive_like = 1
+I, [2013-04-25T15:32:34.442375 #43019]  INFO -- : (0.000348s) SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:32:56.590638 #43172]  INFO -- : (0.000265s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:32:56.590862 #43172]  INFO -- : (0.000031s) PRAGMA case_sensitive_like = 1
+I, [2013-04-25T15:32:56.591091 #43172]  INFO -- : (0.000111s) SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:32:57.610643 #43176]  INFO -- : (0.000266s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:32:57.610862 #43176]  INFO -- : (0.000030s) PRAGMA case_sensitive_like = 1
+I, [2013-04-25T15:32:57.611106 #43176]  INFO -- : (0.000126s) SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:36:09.391435 #43228]  INFO -- : (0.000575s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:36:09.397735 #43228]  INFO -- : (0.000138s) PRAGMA case_sensitive_like = 1
+I, [2013-04-25T15:36:09.398368 #43228]  INFO -- : (0.000337s) SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:36:09.399086 #43228]  INFO -- : (0.000171s) SELECT sqlite_version() LIMIT 1
+I, [2013-04-25T15:36:09.399943 #43228]  INFO -- : (0.000124s) CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+E, [2013-04-25T15:36:09.400679 #43228] ERROR -- : SQLite3::SQLException: index migrations_name_index already exists: CREATE INDEX `migrations_name_index` ON `migrations` (`name`)
+I, [2013-04-25T15:36:09.401744 #43228]  INFO -- : (0.000250s) SELECT COUNT(*) AS 'count' FROM `migrations` WHERE (`name` = 'create packages') LIMIT 1
+I, [2013-04-25T15:36:09.402414 #43228]  INFO -- : (0.000112s) CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+E, [2013-04-25T15:36:09.402994 #43228] ERROR -- : SQLite3::SQLException: index migrations_name_index already exists: CREATE INDEX `migrations_name_index` ON `migrations` (`name`)
+I, [2013-04-25T15:36:09.403894 #43228]  INFO -- : (0.000214s) SELECT COUNT(*) AS 'count' FROM `migrations` WHERE (`name` = 'add hits') LIMIT 1
+I, [2013-04-25T15:36:09.406051 #43228]  INFO -- : (0.001088s) PRAGMA table_info('packages')
+I, [2013-04-25T15:36:09.458179 #43234]  INFO -- : (0.001122s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:36:22.167021 #43234]  INFO -- : (0.001016s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:36:29.503275 #43234]  INFO -- : (0.000493s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:36:29.504047 #43234]  INFO -- : (0.000090s) BEGIN
+E, [2013-04-25T15:36:29.505598 #43234] ERROR -- : SQLite3::CantOpenException: unable to open database file: UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 1 WHERE (`id` = 21)
+I, [2013-04-25T15:36:29.506154 #43234]  INFO -- : (0.000101s) ROLLBACK
+I, [2013-04-25T15:38:36.577013 #43298]  INFO -- : (0.000231s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:38:36.577245 #43298]  INFO -- : (0.000031s) PRAGMA case_sensitive_like = 1
+E, [2013-04-25T15:38:36.577454 #43298] ERROR -- : SQLite3::SQLException: no such table: packages: SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:38:36.577820 #43298]  INFO -- : (0.000096s) SELECT sqlite_version() LIMIT 1
+I, [2013-04-25T15:38:36.578383 #43298]  INFO -- : (0.000256s) CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+I, [2013-04-25T15:38:36.578700 #43298]  INFO -- : (0.000133s) CREATE INDEX `migrations_name_index` ON `migrations` (`name`)
+I, [2013-04-25T15:38:36.579093 #43298]  INFO -- : (0.000108s) SELECT COUNT(*) AS 'count' FROM `migrations` WHERE (`name` = 'create packages') LIMIT 1
+I, [2013-04-25T15:38:36.579263 #43298]  INFO -- : (0.000034s) BEGIN
+I, [2013-04-25T15:38:36.579698 #43298]  INFO -- : (0.000188s) CREATE TABLE `packages` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` varchar(255) NOT NULL UNIQUE, `url` varchar(255) NOT NULL UNIQUE, `created_at` timestamp)
+I, [2013-04-25T15:38:36.579965 #43298]  INFO -- : (0.000113s) CREATE INDEX `packages_name_index` ON `packages` (`name`)
+I, [2013-04-25T15:38:36.580360 #43298]  INFO -- : (0.000146s) INSERT INTO `migrations` (`name`, `ran_at`) VALUES ('create packages', '2013-04-25 15:38:36.580068-0500')
+I, [2013-04-25T15:38:36.580516 #43298]  INFO -- : (0.000032s) COMMIT
+I, [2013-04-25T15:38:36.580775 #43298]  INFO -- : (0.000031s) CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+E, [2013-04-25T15:38:36.581027 #43298] ERROR -- : SQLite3::SQLException: index migrations_name_index already exists: CREATE INDEX `migrations_name_index` ON `migrations` (`name`)
+I, [2013-04-25T15:38:36.581386 #43298]  INFO -- : (0.000073s) SELECT COUNT(*) AS 'count' FROM `migrations` WHERE (`name` = 'add hits') LIMIT 1
+I, [2013-04-25T15:38:36.581539 #43298]  INFO -- : (0.000031s) BEGIN
+I, [2013-04-25T15:38:36.581775 #43298]  INFO -- : (0.000062s) PRAGMA foreign_keys
+I, [2013-04-25T15:38:36.581907 #43298]  INFO -- : (0.000026s) PRAGMA foreign_keys = off
+I, [2013-04-25T15:38:36.582257 #43298]  INFO -- : (0.000184s) ALTER TABLE `packages` ADD COLUMN `hits` integer DEFAULT (0)
+I, [2013-04-25T15:38:36.582394 #43298]  INFO -- : (0.000028s) PRAGMA foreign_keys = on
+I, [2013-04-25T15:38:36.582657 #43298]  INFO -- : (0.000056s) INSERT INTO `migrations` (`name`, `ran_at`) VALUES ('add hits', '2013-04-25 15:38:36.582496-0500')
+I, [2013-04-25T15:38:36.582787 #43298]  INFO -- : (0.000032s) COMMIT
+I, [2013-04-25T15:38:36.583744 #43298]  INFO -- : (0.000474s) PRAGMA table_info('packages')
+I, [2013-04-25T15:38:36.608595 #43304]  INFO -- : (0.000248s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:38:49.686879 #43304]  INFO -- : (0.000336s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:39:08.351515 #43304]  INFO -- : (0.000126s) BEGIN
+I, [2013-04-25T15:39:08.352619 #43304]  INFO -- : (0.000269s) INSERT INTO `packages` (`name`, `url`) VALUES ('express', 'git://github.com/visionmedia/express.git')
+I, [2013-04-25T15:39:08.353710 #43304]  INFO -- : (0.000320s) SELECT * FROM `packages` WHERE (`id` = 1) LIMIT 1
+I, [2013-04-25T15:39:08.354168 #43304]  INFO -- : (0.000120s) COMMIT
+I, [2013-04-25T15:39:08.374892 #43304]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:39:08.375701 #43304]  INFO -- : (0.000204s) INSERT INTO `packages` (`name`, `url`) VALUES ('underscore', 'git://github.com/documentcloud/underscore.git')
+I, [2013-04-25T15:39:08.376689 #43304]  INFO -- : (0.000272s) SELECT * FROM `packages` WHERE (`id` = 2) LIMIT 1
+I, [2013-04-25T15:39:08.377095 #43304]  INFO -- : (0.000087s) COMMIT
+I, [2013-04-25T15:39:08.408677 #43304]  INFO -- : (0.000184s) BEGIN
+I, [2013-04-25T15:39:08.409586 #43304]  INFO -- : (0.000241s) INSERT INTO `packages` (`name`, `url`) VALUES ('socketstream', 'git://github.com/socketstream/socketstream')
+I, [2013-04-25T15:39:08.410653 #43304]  INFO -- : (0.000321s) SELECT * FROM `packages` WHERE (`id` = 3) LIMIT 1
+I, [2013-04-25T15:39:08.411052 #43304]  INFO -- : (0.000088s) COMMIT
+I, [2013-04-25T15:39:08.432413 #43304]  INFO -- : (0.000068s) BEGIN
+I, [2013-04-25T15:39:08.433218 #43304]  INFO -- : (0.000194s) INSERT INTO `packages` (`name`, `url`) VALUES ('ss', 'git://github.com/socketstream/ss-stylus')
+I, [2013-04-25T15:39:08.434256 #43304]  INFO -- : (0.000309s) SELECT * FROM `packages` WHERE (`id` = 4) LIMIT 1
+I, [2013-04-25T15:39:08.434654 #43304]  INFO -- : (0.000088s) COMMIT
+I, [2013-04-25T15:39:08.454372 #43304]  INFO -- : (0.000068s) BEGIN
+I, [2013-04-25T15:39:08.455179 #43304]  INFO -- : (0.000197s) INSERT INTO `packages` (`name`, `url`) VALUES ('node', 'git://github.com/astro/node-expat.git')
+I, [2013-04-25T15:39:08.456173 #43304]  INFO -- : (0.000272s) SELECT * FROM `packages` WHERE (`id` = 5) LIMIT 1
+I, [2013-04-25T15:39:08.456571 #43304]  INFO -- : (0.000089s) COMMIT
+I, [2013-04-25T15:39:08.476897 #43304]  INFO -- : (0.000070s) BEGIN
+I, [2013-04-25T15:39:08.477706 #43304]  INFO -- : (0.000194s) INSERT INTO `packages` (`name`, `url`) VALUES ('redis', 'git://github.com/mranney/node_redis.git')
+I, [2013-04-25T15:39:08.478759 #43304]  INFO -- : (0.000271s) SELECT * FROM `packages` WHERE (`id` = 6) LIMIT 1
+I, [2013-04-25T15:39:08.479185 #43304]  INFO -- : (0.000111s) COMMIT
+I, [2013-04-25T15:39:08.500729 #43304]  INFO -- : (0.000068s) BEGIN
+I, [2013-04-25T15:39:08.501551 #43304]  INFO -- : (0.000196s) INSERT INTO `packages` (`name`, `url`) VALUES ('bower', 'git://github.com/twitter/bower.git')
+I, [2013-04-25T15:39:08.502588 #43304]  INFO -- : (0.000272s) SELECT * FROM `packages` WHERE (`id` = 7) LIMIT 1
+I, [2013-04-25T15:39:08.503013 #43304]  INFO -- : (0.000114s) COMMIT
+I, [2013-04-25T15:39:08.523035 #43304]  INFO -- : (0.000075s) BEGIN
+I, [2013-04-25T15:39:08.523852 #43304]  INFO -- : (0.000200s) INSERT INTO `packages` (`name`, `url`) VALUES ('session', 'git://github.com/as-jpolo/node-session.git')
+I, [2013-04-25T15:39:08.524850 #43304]  INFO -- : (0.000275s) SELECT * FROM `packages` WHERE (`id` = 8) LIMIT 1
+I, [2013-04-25T15:39:08.525266 #43304]  INFO -- : (0.000088s) COMMIT
+I, [2013-04-25T15:39:08.544986 #43304]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:39:08.545800 #43304]  INFO -- : (0.000199s) INSERT INTO `packages` (`name`, `url`) VALUES ('url', 'git://github.com/coolaj86/node.git')
+I, [2013-04-25T15:39:08.546835 #43304]  INFO -- : (0.000270s) SELECT * FROM `packages` WHERE (`id` = 9) LIMIT 1
+I, [2013-04-25T15:39:08.547233 #43304]  INFO -- : (0.000087s) COMMIT
+I, [2013-04-25T15:39:08.569793 #43304]  INFO -- : (0.000070s) BEGIN
+I, [2013-04-25T15:39:08.570662 #43304]  INFO -- : (0.000200s) INSERT INTO `packages` (`name`, `url`) VALUES ('nodiak', 'git://github.com/nathanaschbacher/nodiak.git')
+I, [2013-04-25T15:39:08.571665 #43304]  INFO -- : (0.000272s) SELECT * FROM `packages` WHERE (`id` = 10) LIMIT 1
+I, [2013-04-25T15:39:08.572083 #43304]  INFO -- : (0.000112s) COMMIT
+I, [2013-04-25T15:39:08.591367 #43304]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:39:08.592180 #43304]  INFO -- : (0.000199s) INSERT INTO `packages` (`name`, `url`) VALUES ('nconf', 'git://github.com/flatiron/nconf.git')
+I, [2013-04-25T15:39:08.593193 #43304]  INFO -- : (0.000269s) SELECT * FROM `packages` WHERE (`id` = 11) LIMIT 1
+I, [2013-04-25T15:39:08.593585 #43304]  INFO -- : (0.000087s) COMMIT
+I, [2013-04-25T15:39:08.613725 #43304]  INFO -- : (0.000068s) BEGIN
+I, [2013-04-25T15:39:08.614575 #43304]  INFO -- : (0.000198s) INSERT INTO `packages` (`name`, `url`) VALUES ('tedious', 'git://github.com/pekim/tedious.git')
+I, [2013-04-25T15:39:08.615583 #43304]  INFO -- : (0.000275s) SELECT * FROM `packages` WHERE (`id` = 12) LIMIT 1
+I, [2013-04-25T15:39:08.616019 #43304]  INFO -- : (0.000113s) COMMIT
+I, [2013-04-25T15:39:08.635816 #43304]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:39:08.636625 #43304]  INFO -- : (0.000198s) INSERT INTO `packages` (`name`, `url`) VALUES ('coffeescript', 'git://github.com/jashkenas/coffee-script.git')
+I, [2013-04-25T15:39:08.637614 #43304]  INFO -- : (0.000275s) SELECT * FROM `packages` WHERE (`id` = 13) LIMIT 1
+I, [2013-04-25T15:39:08.638031 #43304]  INFO -- : (0.000088s) COMMIT
+I, [2013-04-25T15:39:08.660402 #43304]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:39:08.661218 #43304]  INFO -- : (0.000198s) INSERT INTO `packages` (`name`, `url`) VALUES ('jquery', 'git://github.com/jquery/jquery.git')
+I, [2013-04-25T15:39:08.662263 #43304]  INFO -- : (0.000311s) SELECT * FROM `packages` WHERE (`id` = 14) LIMIT 1
+I, [2013-04-25T15:39:08.662684 #43304]  INFO -- : (0.000088s) COMMIT
+I, [2013-04-25T15:39:08.682703 #43304]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:39:08.683520 #43304]  INFO -- : (0.000197s) INSERT INTO `packages` (`name`, `url`) VALUES ('bootstrap', 'git://github.com/twitter/bootstrap.git')
+I, [2013-04-25T15:39:08.684528 #43304]  INFO -- : (0.000276s) SELECT * FROM `packages` WHERE (`id` = 15) LIMIT 1
+I, [2013-04-25T15:39:08.684948 #43304]  INFO -- : (0.000112s) COMMIT
+I, [2013-04-25T15:39:08.704627 #43304]  INFO -- : (0.000068s) BEGIN
+I, [2013-04-25T15:39:08.705432 #43304]  INFO -- : (0.000200s) INSERT INTO `packages` (`name`, `url`) VALUES ('ember.js', 'git://github.com/emberjs/ember.js.git')
+I, [2013-04-25T15:39:08.706713 #43304]  INFO -- : (0.000296s) SELECT * FROM `packages` WHERE (`id` = 16) LIMIT 1
+I, [2013-04-25T15:39:08.707198 #43304]  INFO -- : (0.000110s) COMMIT
+I, [2013-04-25T15:39:08.727492 #43304]  INFO -- : (0.000073s) BEGIN
+I, [2013-04-25T15:39:08.728374 #43304]  INFO -- : (0.000203s) INSERT INTO `packages` (`name`, `url`) VALUES ('jquery-ui', 'git://github.com/jquery/jquery-ui.git')
+I, [2013-04-25T15:39:08.729342 #43304]  INFO -- : (0.000279s) SELECT * FROM `packages` WHERE (`id` = 17) LIMIT 1
+I, [2013-04-25T15:39:08.729796 #43304]  INFO -- : (0.000112s) COMMIT
+I, [2013-04-25T15:39:08.749148 #43304]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:39:08.750043 #43304]  INFO -- : (0.000221s) INSERT INTO `packages` (`name`, `url`) VALUES ('h5bp', 'git://github.com/h5bp/html5-boilerplate.git')
+I, [2013-04-25T15:39:08.751055 #43304]  INFO -- : (0.000275s) SELECT * FROM `packages` WHERE (`id` = 18) LIMIT 1
+I, [2013-04-25T15:39:08.751475 #43304]  INFO -- : (0.000089s) COMMIT
+I, [2013-04-25T15:39:08.771483 #43304]  INFO -- : (0.000072s) BEGIN
+E, [2013-04-25T15:39:08.772606 #43304] ERROR -- : SQLite3::ConstraintException: column url is not unique: INSERT INTO `packages` (`name`, `url`) VALUES ('h5bp', 'git://github.com/h5bp/html5-boilerplate.git')
+I, [2013-04-25T15:39:08.773115 #43304]  INFO -- : (0.000078s) ROLLBACK
+I, [2013-04-25T15:39:08.795683 #43304]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:39:08.796502 #43304]  INFO -- : (0.000201s) INSERT INTO `packages` (`name`, `url`) VALUES ('h5bp-mobile', 'git://github.com/h5bp/mobile-boilerplate.git')
+I, [2013-04-25T15:39:08.797525 #43304]  INFO -- : (0.000283s) SELECT * FROM `packages` WHERE (`id` = 19) LIMIT 1
+I, [2013-04-25T15:39:08.797943 #43304]  INFO -- : (0.000111s) COMMIT
+I, [2013-04-25T15:39:08.818699 #43304]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:39:08.819507 #43304]  INFO -- : (0.000198s) INSERT INTO `packages` (`name`, `url`) VALUES ('arm-data-broker', 'https://git.armt.com/smazzucco/arm-data-broker.git')
+I, [2013-04-25T15:39:08.820503 #43304]  INFO -- : (0.000272s) SELECT * FROM `packages` WHERE (`id` = 20) LIMIT 1
+I, [2013-04-25T15:39:08.820899 #43304]  INFO -- : (0.000087s) COMMIT
+I, [2013-04-25T15:39:10.691563 #43304]  INFO -- : (0.000896s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:39:20.087218 #43304]  INFO -- : (0.000408s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:39:20.087920 #43304]  INFO -- : (0.000091s) BEGIN
+I, [2013-04-25T15:39:20.089012 #43304]  INFO -- : (0.000236s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 1 WHERE (`id` = 20)
+I, [2013-04-25T15:39:20.089537 #43304]  INFO -- : (0.000140s) COMMIT
+I, [2013-04-25T15:40:07.302815 #43414]  INFO -- : (0.000550s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:40:07.303282 #43414]  INFO -- : (0.000067s) PRAGMA case_sensitive_like = 1
+I, [2013-04-25T15:40:07.303875 #43414]  INFO -- : (0.000242s) SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:40:07.304506 #43414]  INFO -- : (0.000155s) SELECT sqlite_version() LIMIT 1
+I, [2013-04-25T15:40:07.305250 #43414]  INFO -- : (0.000164s) CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+E, [2013-04-25T15:40:07.305828 #43414] ERROR -- : SQLite3::SQLException: index migrations_name_index already exists: CREATE INDEX `migrations_name_index` ON `migrations` (`name`)
+I, [2013-04-25T15:40:07.306792 #43414]  INFO -- : (0.000231s) SELECT COUNT(*) AS 'count' FROM `migrations` WHERE (`name` = 'create packages') LIMIT 1
+I, [2013-04-25T15:40:07.307446 #43414]  INFO -- : (0.000129s) CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+E, [2013-04-25T15:40:07.307982 #43414] ERROR -- : SQLite3::SQLException: index migrations_name_index already exists: CREATE INDEX `migrations_name_index` ON `migrations` (`name`)
+I, [2013-04-25T15:40:07.308740 #43414]  INFO -- : (0.000200s) SELECT COUNT(*) AS 'count' FROM `migrations` WHERE (`name` = 'add hits') LIMIT 1
+I, [2013-04-25T15:40:07.310743 #43414]  INFO -- : (0.001025s) PRAGMA table_info('packages')
+I, [2013-04-25T15:40:07.359513 #43420]  INFO -- : (0.000670s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:40:07.360190 #43420]  INFO -- : (0.000080s) BEGIN
+E, [2013-04-25T15:40:07.361570 #43420] ERROR -- : SQLite3::CantOpenException: unable to open database file: UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 1 WHERE (`id` = 21)
+I, [2013-04-25T15:40:07.362071 #43420]  INFO -- : (0.000111s) ROLLBACK
+I, [2013-04-25T15:41:27.808841 #43469]  INFO -- : (0.000944s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:41:27.809324 #43469]  INFO -- : (0.000070s) PRAGMA case_sensitive_like = 1
+I, [2013-04-25T15:41:27.809869 #43469]  INFO -- : (0.000270s) SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:41:27.812585 #43469]  INFO -- : (0.001587s) PRAGMA table_info('packages')
+I, [2013-04-25T15:41:27.862560 #43475]  INFO -- : (0.000704s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:41:27.863572 #43475]  INFO -- : (0.000161s) SELECT sqlite_version() LIMIT 1
+I, [2013-04-25T15:41:27.863973 #43475]  INFO -- : (0.000084s) BEGIN
+E, [2013-04-25T15:41:27.865392 #43475] ERROR -- : SQLite3::CantOpenException: unable to open database file: UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 1 WHERE (`id` = 21)
+I, [2013-04-25T15:41:27.865838 #43475]  INFO -- : (0.000093s) ROLLBACK
+I, [2013-04-25T15:41:31.614480 #43475]  INFO -- : (0.001027s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:41:40.056688 #43475]  INFO -- : (0.000928s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:41:57.358183 #43475]  INFO -- : (0.000363s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:41:57.358754 #43475]  INFO -- : (0.000070s) BEGIN
+E, [2013-04-25T15:41:57.359744 #43475] ERROR -- : SQLite3::CantOpenException: unable to open database file: UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 1 WHERE (`id` = 21)
+I, [2013-04-25T15:41:57.360103 #43475]  INFO -- : (0.000075s) ROLLBACK
+I, [2013-04-25T15:42:23.095987 #43522]  INFO -- : (0.000205s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:42:23.096218 #43522]  INFO -- : (0.000030s) PRAGMA case_sensitive_like = 1
+E, [2013-04-25T15:42:23.096402 #43522] ERROR -- : SQLite3::SQLException: no such table: packages: SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:42:23.096912 #43522]  INFO -- : (0.000050s) PRAGMA table_info('packages')
+E, [2013-04-25T15:42:23.097240 #43522] ERROR -- : SQLite3::SQLException: no such table: packages: SELECT * FROM `packages` LIMIT 1
+E, [2013-04-25T15:42:23.129071 #43528] ERROR -- : SQLite3::SQLException: no such table: packages: SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+E, [2013-04-25T15:42:44.334569 #43528] ERROR -- : SQLite3::SQLException: no such table: packages: SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+E, [2013-04-25T15:42:48.889526 #43528] ERROR -- : SQLite3::SQLException: no such table: packages: SELECT * FROM `packages` ORDER BY `name`
+E, [2013-04-25T15:42:51.172775 #43528] ERROR -- : SQLite3::SQLException: no such table: packages: SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:43:36.723214 #43620]  INFO -- : (0.000403s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:43:36.723632 #43620]  INFO -- : (0.000064s) PRAGMA case_sensitive_like = 1
+E, [2013-04-25T15:43:36.724023 #43620] ERROR -- : SQLite3::SQLException: no such table: packages: SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:43:36.724799 #43620]  INFO -- : (0.000242s) SELECT sqlite_version() LIMIT 1
+I, [2013-04-25T15:43:36.726041 #43620]  INFO -- : (0.000686s) CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+I, [2013-04-25T15:43:36.726718 #43620]  INFO -- : (0.000283s) CREATE INDEX `migrations_name_index` ON `migrations` (`name`)
+I, [2013-04-25T15:43:36.727503 #43620]  INFO -- : (0.000167s) SELECT COUNT(*) AS 'count' FROM `migrations` WHERE (`name` = 'create packages') LIMIT 1
+I, [2013-04-25T15:43:36.727850 #43620]  INFO -- : (0.000070s) BEGIN
+I, [2013-04-25T15:43:36.728758 #43620]  INFO -- : (0.000385s) CREATE TABLE `packages` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` varchar(255) NOT NULL UNIQUE, `url` varchar(255) NOT NULL UNIQUE, `created_at` timestamp)
+I, [2013-04-25T15:43:36.729314 #43620]  INFO -- : (0.000240s) CREATE INDEX `packages_name_index` ON `packages` (`name`)
+I, [2013-04-25T15:43:36.729920 #43620]  INFO -- : (0.000120s) INSERT INTO `migrations` (`name`, `ran_at`) VALUES ('create packages', '2013-04-25 15:43:36.729526-0500')
+I, [2013-04-25T15:43:36.730224 #43620]  INFO -- : (0.000064s) COMMIT
+I, [2013-04-25T15:43:36.730775 #43620]  INFO -- : (0.000065s) CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+E, [2013-04-25T15:43:36.731255 #43620] ERROR -- : SQLite3::SQLException: index migrations_name_index already exists: CREATE INDEX `migrations_name_index` ON `migrations` (`name`)
+I, [2013-04-25T15:43:36.731966 #43620]  INFO -- : (0.000158s) SELECT COUNT(*) AS 'count' FROM `migrations` WHERE (`name` = 'add hits') LIMIT 1
+I, [2013-04-25T15:43:36.732293 #43620]  INFO -- : (0.000064s) BEGIN
+I, [2013-04-25T15:43:36.732704 #43620]  INFO -- : (0.000098s) PRAGMA foreign_keys
+I, [2013-04-25T15:43:36.732973 #43620]  INFO -- : (0.000053s) PRAGMA foreign_keys = off
+I, [2013-04-25T15:43:36.733698 #43620]  INFO -- : (0.000339s) ALTER TABLE `packages` ADD COLUMN `hits` integer DEFAULT (0)
+I, [2013-04-25T15:43:36.733979 #43620]  INFO -- : (0.000056s) PRAGMA foreign_keys = on
+I, [2013-04-25T15:43:36.734603 #43620]  INFO -- : (0.000118s) INSERT INTO `migrations` (`name`, `ran_at`) VALUES ('add hits', '2013-04-25 15:43:36.734220-0500')
+I, [2013-04-25T15:43:36.734871 #43620]  INFO -- : (0.000063s) COMMIT
+I, [2013-04-25T15:43:36.736773 #43620]  INFO -- : (0.001030s) PRAGMA table_info('packages')
+I, [2013-04-25T15:43:36.782659 #43626]  INFO -- : (0.000455s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:43:47.422772 #43626]  INFO -- : (0.000121s) BEGIN
+I, [2013-04-25T15:43:47.423829 #43626]  INFO -- : (0.000266s) INSERT INTO `packages` (`name`, `url`) VALUES ('express', 'git://github.com/visionmedia/express.git')
+I, [2013-04-25T15:43:47.424956 #43626]  INFO -- : (0.000325s) SELECT * FROM `packages` WHERE (`id` = 1) LIMIT 1
+I, [2013-04-25T15:43:47.425435 #43626]  INFO -- : (0.000090s) COMMIT
+I, [2013-04-25T15:43:47.445339 #43626]  INFO -- : (0.000102s) BEGIN
+I, [2013-04-25T15:43:47.446136 #43626]  INFO -- : (0.000207s) INSERT INTO `packages` (`name`, `url`) VALUES ('underscore', 'git://github.com/documentcloud/underscore.git')
+I, [2013-04-25T15:43:47.447079 #43626]  INFO -- : (0.000270s) SELECT * FROM `packages` WHERE (`id` = 2) LIMIT 1
+I, [2013-04-25T15:43:47.447570 #43626]  INFO -- : (0.000111s) COMMIT
+I, [2013-04-25T15:43:47.468394 #43626]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:43:47.469344 #43626]  INFO -- : (0.000256s) INSERT INTO `packages` (`name`, `url`) VALUES ('socketstream', 'git://github.com/socketstream/socketstream')
+I, [2013-04-25T15:43:47.470314 #43626]  INFO -- : (0.000274s) SELECT * FROM `packages` WHERE (`id` = 3) LIMIT 1
+I, [2013-04-25T15:43:47.470742 #43626]  INFO -- : (0.000087s) COMMIT
+I, [2013-04-25T15:43:47.503311 #43626]  INFO -- : (0.000094s) BEGIN
+I, [2013-04-25T15:43:47.504184 #43626]  INFO -- : (0.000237s) INSERT INTO `packages` (`name`, `url`) VALUES ('ss', 'git://github.com/socketstream/ss-stylus')
+I, [2013-04-25T15:43:47.505177 #43626]  INFO -- : (0.000312s) SELECT * FROM `packages` WHERE (`id` = 4) LIMIT 1
+I, [2013-04-25T15:43:47.505572 #43626]  INFO -- : (0.000089s) COMMIT
+I, [2013-04-25T15:43:47.526336 #43626]  INFO -- : (0.000107s) BEGIN
+I, [2013-04-25T15:43:47.527329 #43626]  INFO -- : (0.000197s) INSERT INTO `packages` (`name`, `url`) VALUES ('node', 'git://github.com/astro/node-expat.git')
+I, [2013-04-25T15:43:47.528607 #43626]  INFO -- : (0.000295s) SELECT * FROM `packages` WHERE (`id` = 5) LIMIT 1
+I, [2013-04-25T15:43:47.529005 #43626]  INFO -- : (0.000087s) COMMIT
+I, [2013-04-25T15:43:47.547403 #43626]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:43:47.548223 #43626]  INFO -- : (0.000218s) INSERT INTO `packages` (`name`, `url`) VALUES ('redis', 'git://github.com/mranney/node_redis.git')
+I, [2013-04-25T15:43:47.549203 #43626]  INFO -- : (0.000338s) SELECT * FROM `packages` WHERE (`id` = 6) LIMIT 1
+I, [2013-04-25T15:43:47.549621 #43626]  INFO -- : (0.000087s) COMMIT
+I, [2013-04-25T15:43:47.571565 #43626]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:43:47.572335 #43626]  INFO -- : (0.000195s) INSERT INTO `packages` (`name`, `url`) VALUES ('bower', 'git://github.com/twitter/bower.git')
+I, [2013-04-25T15:43:47.573258 #43626]  INFO -- : (0.000273s) SELECT * FROM `packages` WHERE (`id` = 7) LIMIT 1
+I, [2013-04-25T15:43:47.573720 #43626]  INFO -- : (0.000088s) COMMIT
+I, [2013-04-25T15:43:47.593988 #43626]  INFO -- : (0.000068s) BEGIN
+I, [2013-04-25T15:43:47.594843 #43626]  INFO -- : (0.000198s) INSERT INTO `packages` (`name`, `url`) VALUES ('session', 'git://github.com/as-jpolo/node-session.git')
+I, [2013-04-25T15:43:47.595854 #43626]  INFO -- : (0.000281s) SELECT * FROM `packages` WHERE (`id` = 8) LIMIT 1
+I, [2013-04-25T15:43:47.596303 #43626]  INFO -- : (0.000088s) COMMIT
+I, [2013-04-25T15:43:47.618070 #43626]  INFO -- : (0.000068s) BEGIN
+I, [2013-04-25T15:43:47.618943 #43626]  INFO -- : (0.000195s) INSERT INTO `packages` (`name`, `url`) VALUES ('url', 'git://github.com/coolaj86/node.git')
+I, [2013-04-25T15:43:47.619910 #43626]  INFO -- : (0.000272s) SELECT * FROM `packages` WHERE (`id` = 9) LIMIT 1
+I, [2013-04-25T15:43:47.620378 #43626]  INFO -- : (0.000132s) COMMIT
+I, [2013-04-25T15:43:47.640036 #43626]  INFO -- : (0.000067s) BEGIN
+I, [2013-04-25T15:43:47.640850 #43626]  INFO -- : (0.000217s) INSERT INTO `packages` (`name`, `url`) VALUES ('nodiak', 'git://github.com/nathanaschbacher/nodiak.git')
+I, [2013-04-25T15:43:47.641785 #43626]  INFO -- : (0.000273s) SELECT * FROM `packages` WHERE (`id` = 10) LIMIT 1
+I, [2013-04-25T15:43:47.642237 #43626]  INFO -- : (0.000085s) COMMIT
+I, [2013-04-25T15:43:47.664354 #43626]  INFO -- : (0.000068s) BEGIN
+I, [2013-04-25T15:43:47.665166 #43626]  INFO -- : (0.000196s) INSERT INTO `packages` (`name`, `url`) VALUES ('nconf', 'git://github.com/flatiron/nconf.git')
+I, [2013-04-25T15:43:47.666125 #43626]  INFO -- : (0.000323s) SELECT * FROM `packages` WHERE (`id` = 11) LIMIT 1
+I, [2013-04-25T15:43:47.666581 #43626]  INFO -- : (0.000086s) COMMIT
+I, [2013-04-25T15:43:47.686896 #43626]  INFO -- : (0.000068s) BEGIN
+I, [2013-04-25T15:43:47.687730 #43626]  INFO -- : (0.000198s) INSERT INTO `packages` (`name`, `url`) VALUES ('tedious', 'git://github.com/pekim/tedious.git')
+I, [2013-04-25T15:43:47.688673 #43626]  INFO -- : (0.000271s) SELECT * FROM `packages` WHERE (`id` = 12) LIMIT 1
+I, [2013-04-25T15:43:47.689134 #43626]  INFO -- : (0.000085s) COMMIT
+I, [2013-04-25T15:43:47.710025 #43626]  INFO -- : (0.000068s) BEGIN
+I, [2013-04-25T15:43:47.710910 #43626]  INFO -- : (0.000195s) INSERT INTO `packages` (`name`, `url`) VALUES ('coffeescript', 'git://github.com/jashkenas/coffee-script.git')
+I, [2013-04-25T15:43:47.711813 #43626]  INFO -- : (0.000270s) SELECT * FROM `packages` WHERE (`id` = 13) LIMIT 1
+I, [2013-04-25T15:43:47.712282 #43626]  INFO -- : (0.000132s) COMMIT
+I, [2013-04-25T15:43:47.732773 #43626]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:43:47.733602 #43626]  INFO -- : (0.000198s) INSERT INTO `packages` (`name`, `url`) VALUES ('jquery', 'git://github.com/jquery/jquery.git')
+I, [2013-04-25T15:43:47.734603 #43626]  INFO -- : (0.000328s) SELECT * FROM `packages` WHERE (`id` = 14) LIMIT 1
+I, [2013-04-25T15:43:47.735077 #43626]  INFO -- : (0.000099s) COMMIT
+I, [2013-04-25T15:43:47.756912 #43626]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:43:47.757793 #43626]  INFO -- : (0.000196s) INSERT INTO `packages` (`name`, `url`) VALUES ('bootstrap', 'git://github.com/twitter/bootstrap.git')
+I, [2013-04-25T15:43:47.758734 #43626]  INFO -- : (0.000270s) SELECT * FROM `packages` WHERE (`id` = 15) LIMIT 1
+I, [2013-04-25T15:43:47.759231 #43626]  INFO -- : (0.000086s) COMMIT
+I, [2013-04-25T15:43:47.779896 #43626]  INFO -- : (0.000067s) BEGIN
+I, [2013-04-25T15:43:47.780718 #43626]  INFO -- : (0.000246s) INSERT INTO `packages` (`name`, `url`) VALUES ('ember.js', 'git://github.com/emberjs/ember.js.git')
+I, [2013-04-25T15:43:47.781638 #43626]  INFO -- : (0.000300s) SELECT * FROM `packages` WHERE (`id` = 16) LIMIT 1
+I, [2013-04-25T15:43:47.782063 #43626]  INFO -- : (0.000092s) COMMIT
+I, [2013-04-25T15:43:47.803383 #43626]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:43:47.804279 #43626]  INFO -- : (0.000236s) INSERT INTO `packages` (`name`, `url`) VALUES ('jquery-ui', 'git://github.com/jquery/jquery-ui.git')
+I, [2013-04-25T15:43:47.805194 #43626]  INFO -- : (0.000284s) SELECT * FROM `packages` WHERE (`id` = 17) LIMIT 1
+I, [2013-04-25T15:43:47.805664 #43626]  INFO -- : (0.000086s) COMMIT
+I, [2013-04-25T15:43:47.826688 #43626]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:43:47.827578 #43626]  INFO -- : (0.000256s) INSERT INTO `packages` (`name`, `url`) VALUES ('h5bp', 'git://github.com/h5bp/html5-boilerplate.git')
+I, [2013-04-25T15:43:47.828510 #43626]  INFO -- : (0.000300s) SELECT * FROM `packages` WHERE (`id` = 18) LIMIT 1
+I, [2013-04-25T15:43:47.828931 #43626]  INFO -- : (0.000086s) COMMIT
+I, [2013-04-25T15:43:47.850302 #43626]  INFO -- : (0.000068s) BEGIN
+E, [2013-04-25T15:43:47.851455 #43626] ERROR -- : SQLite3::ConstraintException: column url is not unique: INSERT INTO `packages` (`name`, `url`) VALUES ('h5bp', 'git://github.com/h5bp/html5-boilerplate.git')
+I, [2013-04-25T15:43:47.851893 #43626]  INFO -- : (0.000078s) ROLLBACK
+I, [2013-04-25T15:43:47.872696 #43626]  INFO -- : (0.000069s) BEGIN
+I, [2013-04-25T15:43:47.873498 #43626]  INFO -- : (0.000223s) INSERT INTO `packages` (`name`, `url`) VALUES ('h5bp-mobile', 'git://github.com/h5bp/mobile-boilerplate.git')
+I, [2013-04-25T15:43:47.874483 #43626]  INFO -- : (0.000354s) SELECT * FROM `packages` WHERE (`id` = 19) LIMIT 1
+I, [2013-04-25T15:43:47.874907 #43626]  INFO -- : (0.000086s) COMMIT
+I, [2013-04-25T15:43:47.896103 #43626]  INFO -- : (0.000070s) BEGIN
+I, [2013-04-25T15:43:47.896908 #43626]  INFO -- : (0.000196s) INSERT INTO `packages` (`name`, `url`) VALUES ('arm-data-broker', 'https://git.armt.com/smazzucco/arm-data-broker.git')
+I, [2013-04-25T15:43:47.898155 #43626]  INFO -- : (0.000613s) SELECT * FROM `packages` WHERE (`id` = 20) LIMIT 1
+I, [2013-04-25T15:43:47.898655 #43626]  INFO -- : (0.000086s) COMMIT
+I, [2013-04-25T15:43:50.160585 #43626]  INFO -- : (0.000884s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:43:52.868945 #43626]  INFO -- : (0.000407s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:43:52.869654 #43626]  INFO -- : (0.000116s) BEGIN
+I, [2013-04-25T15:43:52.870706 #43626]  INFO -- : (0.000287s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 1 WHERE (`id` = 20)
+I, [2013-04-25T15:43:52.871126 #43626]  INFO -- : (0.000089s) COMMIT
+I, [2013-04-25T15:45:17.784019 #43626]  INFO -- : (0.000409s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:17.784748 #43626]  INFO -- : (0.000089s) BEGIN
+I, [2013-04-25T15:45:17.785789 #43626]  INFO -- : (0.000226s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 2 WHERE (`id` = 20)
+I, [2013-04-25T15:45:17.786207 #43626]  INFO -- : (0.000086s) COMMIT
+I, [2013-04-25T15:45:25.159562 #43626]  INFO -- : (0.000407s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:25.160261 #43626]  INFO -- : (0.000090s) BEGIN
+I, [2013-04-25T15:45:25.161489 #43626]  INFO -- : (0.000224s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 3 WHERE (`id` = 20)
+I, [2013-04-25T15:45:25.161932 #43626]  INFO -- : (0.000086s) COMMIT
+I, [2013-04-25T15:45:26.453368 #43626]  INFO -- : (0.000405s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:26.454066 #43626]  INFO -- : (0.000090s) BEGIN
+I, [2013-04-25T15:45:26.455168 #43626]  INFO -- : (0.000224s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 4 WHERE (`id` = 20)
+I, [2013-04-25T15:45:26.455624 #43626]  INFO -- : (0.000111s) COMMIT
+I, [2013-04-25T15:45:27.188795 #43626]  INFO -- : (0.000408s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:27.189497 #43626]  INFO -- : (0.000089s) BEGIN
+I, [2013-04-25T15:45:27.190540 #43626]  INFO -- : (0.000225s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 5 WHERE (`id` = 20)
+I, [2013-04-25T15:45:27.191013 #43626]  INFO -- : (0.000116s) COMMIT
+I, [2013-04-25T15:45:27.933266 #43626]  INFO -- : (0.000408s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:27.933966 #43626]  INFO -- : (0.000088s) BEGIN
+I, [2013-04-25T15:45:27.935013 #43626]  INFO -- : (0.000223s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 6 WHERE (`id` = 20)
+I, [2013-04-25T15:45:27.935470 #43626]  INFO -- : (0.000090s) COMMIT
+I, [2013-04-25T15:45:28.757181 #43626]  INFO -- : (0.000410s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:28.757837 #43626]  INFO -- : (0.000088s) BEGIN
+I, [2013-04-25T15:45:28.759008 #43626]  INFO -- : (0.000224s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 7 WHERE (`id` = 20)
+I, [2013-04-25T15:45:28.759467 #43626]  INFO -- : (0.000122s) COMMIT
+I, [2013-04-25T15:45:29.459989 #43626]  INFO -- : (0.000418s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:29.460595 #43626]  INFO -- : (0.000084s) BEGIN
+I, [2013-04-25T15:45:29.461659 #43626]  INFO -- : (0.000219s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 8 WHERE (`id` = 20)
+I, [2013-04-25T15:45:29.462099 #43626]  INFO -- : (0.000086s) COMMIT
+I, [2013-04-25T15:45:30.021078 #43626]  INFO -- : (0.000403s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:30.021753 #43626]  INFO -- : (0.000107s) BEGIN
+I, [2013-04-25T15:45:30.022787 #43626]  INFO -- : (0.000269s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 9 WHERE (`id` = 20)
+I, [2013-04-25T15:45:30.023281 #43626]  INFO -- : (0.000090s) COMMIT
+I, [2013-04-25T15:45:30.433874 #43626]  INFO -- : (0.000394s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:30.434528 #43626]  INFO -- : (0.000087s) BEGIN
+I, [2013-04-25T15:45:30.435482 #43626]  INFO -- : (0.000222s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 10 WHERE (`id` = 20)
+I, [2013-04-25T15:45:30.435940 #43626]  INFO -- : (0.000135s) COMMIT
+I, [2013-04-25T15:45:30.786523 #43626]  INFO -- : (0.000350s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:30.787090 #43626]  INFO -- : (0.000085s) BEGIN
+I, [2013-04-25T15:45:30.788371 #43626]  INFO -- : (0.000240s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 11 WHERE (`id` = 20)
+I, [2013-04-25T15:45:30.788785 #43626]  INFO -- : (0.000088s) COMMIT
+I, [2013-04-25T15:45:31.137405 #43626]  INFO -- : (0.000396s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:31.138047 #43626]  INFO -- : (0.000111s) BEGIN
+I, [2013-04-25T15:45:31.139073 #43626]  INFO -- : (0.000273s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 12 WHERE (`id` = 20)
+I, [2013-04-25T15:45:31.139550 #43626]  INFO -- : (0.000088s) COMMIT
+I, [2013-04-25T15:45:31.143740 #43626]  INFO -- : (0.000310s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:31.144279 #43626]  INFO -- : (0.000080s) BEGIN
+I, [2013-04-25T15:45:31.147491 #43626]  INFO -- : (0.000206s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 13 WHERE (`id` = 20)
+I, [2013-04-25T15:45:31.147914 #43626]  INFO -- : (0.000087s) COMMIT
+I, [2013-04-25T15:45:31.497018 #43691]  INFO -- : (0.000577s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:31.584288 #43691]  INFO -- : (0.000289s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:31.793401 #43691]  INFO -- : (0.000328s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:34.915543 #43691]  INFO -- : (0.000336s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:42.860609 #43691]  INFO -- : (0.000338s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:43.965376 #43691]  INFO -- : (0.000334s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:45:52.532140 #43691]  INFO -- : (0.000346s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:45:57.029422 #43691]  INFO -- : (0.000347s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:45:57.822485 #43691]  INFO -- : (0.000338s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:47:29.592466 #43773]  INFO -- : (0.000240s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:47:29.592700 #43773]  INFO -- : (0.000031s) PRAGMA case_sensitive_like = 1
+E, [2013-04-25T15:47:29.592907 #43773] ERROR -- : SQLite3::SQLException: no such table: packages: SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:47:29.593266 #43773]  INFO -- : (0.000096s) SELECT sqlite_version() LIMIT 1
+E, [2013-04-25T15:47:29.593823 #43773] ERROR -- : SQLite3::CantOpenException: unable to open database file: CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+I, [2013-04-25T15:47:31.066685 #43776]  INFO -- : (0.000259s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:47:31.066920 #43776]  INFO -- : (0.000032s) PRAGMA case_sensitive_like = 1
+E, [2013-04-25T15:47:31.067256 #43776] ERROR -- : SQLite3::SQLException: no such table: packages: SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:47:31.067831 #43776]  INFO -- : (0.000101s) SELECT sqlite_version() LIMIT 1
+E, [2013-04-25T15:47:31.068304 #43776] ERROR -- : SQLite3::CantOpenException: unable to open database file: CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+I, [2013-04-25T15:48:48.816519 #43956]  INFO -- : (0.000405s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:48:48.818783 #43956]  INFO -- : (0.000064s) PRAGMA case_sensitive_like = 1
+E, [2013-04-25T15:48:48.819192 #43956] ERROR -- : SQLite3::SQLException: no such table: packages: SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:48:48.819856 #43956]  INFO -- : (0.000188s) SELECT sqlite_version() LIMIT 1
+E, [2013-04-25T15:48:48.820769 #43956] ERROR -- : SQLite3::CantOpenException: unable to open database file: CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+I, [2013-04-25T15:48:50.033053 #43960]  INFO -- : (0.000476s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:48:50.033549 #43960]  INFO -- : (0.000073s) PRAGMA case_sensitive_like = 1
+E, [2013-04-25T15:48:50.034027 #43960] ERROR -- : SQLite3::SQLException: no such table: packages: SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:48:50.034898 #43960]  INFO -- : (0.000215s) SELECT sqlite_version() LIMIT 1
+E, [2013-04-25T15:48:50.035965 #43960] ERROR -- : SQLite3::CantOpenException: unable to open database file: CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+I, [2013-04-25T15:49:08.176538 #43982]  INFO -- : (0.000225s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:49:08.176767 #43982]  INFO -- : (0.000030s) PRAGMA case_sensitive_like = 1
+E, [2013-04-25T15:49:08.176970 #43982] ERROR -- : SQLite3::SQLException: no such table: packages: SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:49:08.177410 #43982]  INFO -- : (0.000093s) SELECT sqlite_version() LIMIT 1
+I, [2013-04-25T15:49:08.212833 #43982]  INFO -- : (0.035139s) CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+I, [2013-04-25T15:49:08.231524 #43982]  INFO -- : (0.018494s) CREATE INDEX `migrations_name_index` ON `migrations` (`name`)
+I, [2013-04-25T15:49:08.231969 #43982]  INFO -- : (0.000130s) SELECT COUNT(*) AS 'count' FROM `migrations` WHERE (`name` = 'create packages') LIMIT 1
+I, [2013-04-25T15:49:08.232191 #43982]  INFO -- : (0.000036s) BEGIN
+I, [2013-04-25T15:49:08.232677 #43982]  INFO -- : (0.000233s) CREATE TABLE `packages` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` varchar(255) NOT NULL UNIQUE, `url` varchar(255) NOT NULL UNIQUE, `created_at` timestamp)
+I, [2013-04-25T15:49:08.232928 #43982]  INFO -- : (0.000105s) CREATE INDEX `packages_name_index` ON `packages` (`name`)
+I, [2013-04-25T15:49:08.233282 #43982]  INFO -- : (0.000098s) INSERT INTO `migrations` (`name`, `ran_at`) VALUES ('create packages', '2013-04-25 15:49:08.233028-0500')
+I, [2013-04-25T15:49:08.252750 #43982]  INFO -- : (0.019354s) COMMIT
+I, [2013-04-25T15:49:08.253058 #43982]  INFO -- : (0.000062s) CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+E, [2013-04-25T15:49:08.253291 #43982] ERROR -- : SQLite3::SQLException: index migrations_name_index already exists: CREATE INDEX `migrations_name_index` ON `migrations` (`name`)
+I, [2013-04-25T15:49:08.253659 #43982]  INFO -- : (0.000101s) SELECT COUNT(*) AS 'count' FROM `migrations` WHERE (`name` = 'add hits') LIMIT 1
+I, [2013-04-25T15:49:08.253879 #43982]  INFO -- : (0.000031s) BEGIN
+I, [2013-04-25T15:49:08.254091 #43982]  INFO -- : (0.000057s) PRAGMA foreign_keys
+I, [2013-04-25T15:49:08.254254 #43982]  INFO -- : (0.000058s) PRAGMA foreign_keys = off
+I, [2013-04-25T15:49:08.254668 #43982]  INFO -- : (0.000256s) ALTER TABLE `packages` ADD COLUMN `hits` integer DEFAULT (0)
+I, [2013-04-25T15:49:08.254804 #43982]  INFO -- : (0.000027s) PRAGMA foreign_keys = on
+I, [2013-04-25T15:49:08.255097 #43982]  INFO -- : (0.000079s) INSERT INTO `migrations` (`name`, `ran_at`) VALUES ('add hits', '2013-04-25 15:49:08.254896-0500')
+I, [2013-04-25T15:49:08.273234 #43982]  INFO -- : (0.018017s) COMMIT
+I, [2013-04-25T15:49:08.274240 #43982]  INFO -- : (0.000459s) PRAGMA table_info('packages')
+I, [2013-04-25T15:49:22.351619 #44010]  INFO -- : (0.000578s) PRAGMA foreign_keys = 1
+I, [2013-04-25T15:49:22.352066 #44010]  INFO -- : (0.000073s) PRAGMA case_sensitive_like = 1
+I, [2013-04-25T15:49:22.352577 #44010]  INFO -- : (0.000228s) SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T15:49:22.353308 #44010]  INFO -- : (0.000176s) SELECT sqlite_version() LIMIT 1
+I, [2013-04-25T15:49:22.354076 #44010]  INFO -- : (0.000115s) CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+E, [2013-04-25T15:49:22.354703 #44010] ERROR -- : SQLite3::SQLException: index migrations_name_index already exists: CREATE INDEX `migrations_name_index` ON `migrations` (`name`)
+I, [2013-04-25T15:49:22.355967 #44010]  INFO -- : (0.000256s) SELECT COUNT(*) AS 'count' FROM `migrations` WHERE (`name` = 'create packages') LIMIT 1
+I, [2013-04-25T15:49:22.356606 #44010]  INFO -- : (0.000117s) CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+E, [2013-04-25T15:49:22.357125 #44010] ERROR -- : SQLite3::SQLException: index migrations_name_index already exists: CREATE INDEX `migrations_name_index` ON `migrations` (`name`)
+I, [2013-04-25T15:49:22.357998 #44010]  INFO -- : (0.000276s) SELECT COUNT(*) AS 'count' FROM `migrations` WHERE (`name` = 'add hits') LIMIT 1
+I, [2013-04-25T15:49:22.360173 #44010]  INFO -- : (0.001097s) PRAGMA table_info('packages')
+I, [2013-04-25T15:49:22.412328 #44016]  INFO -- : (0.000588s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:49:31.047658 #44016]  INFO -- : (0.000125s) BEGIN
+E, [2013-04-25T15:49:31.049143 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('express', 'git://github.com/visionmedia/express.git')
+I, [2013-04-25T15:49:31.049672 #44016]  INFO -- : (0.000131s) ROLLBACK
+I, [2013-04-25T15:49:31.070721 #44016]  INFO -- : (0.000071s) BEGIN
+E, [2013-04-25T15:49:31.071710 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('underscore', 'git://github.com/documentcloud/underscore.git')
+I, [2013-04-25T15:49:31.072217 #44016]  INFO -- : (0.000094s) ROLLBACK
+I, [2013-04-25T15:49:31.094378 #44016]  INFO -- : (0.000070s) BEGIN
+E, [2013-04-25T15:49:31.095386 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('socketstream', 'git://github.com/socketstream/socketstream')
+I, [2013-04-25T15:49:31.095929 #44016]  INFO -- : (0.000111s) ROLLBACK
+I, [2013-04-25T15:49:31.118483 #44016]  INFO -- : (0.000071s) BEGIN
+E, [2013-04-25T15:49:31.119460 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('ss', 'git://github.com/socketstream/ss-stylus')
+I, [2013-04-25T15:49:31.119953 #44016]  INFO -- : (0.000114s) ROLLBACK
+I, [2013-04-25T15:49:31.141935 #44016]  INFO -- : (0.000070s) BEGIN
+E, [2013-04-25T15:49:31.142909 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('node', 'git://github.com/astro/node-expat.git')
+I, [2013-04-25T15:49:31.143461 #44016]  INFO -- : (0.000130s) ROLLBACK
+I, [2013-04-25T15:49:31.165970 #44016]  INFO -- : (0.000073s) BEGIN
+E, [2013-04-25T15:49:31.166976 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('redis', 'git://github.com/mranney/node_redis.git')
+I, [2013-04-25T15:49:31.167451 #44016]  INFO -- : (0.000087s) ROLLBACK
+I, [2013-04-25T15:49:31.189761 #44016]  INFO -- : (0.000072s) BEGIN
+E, [2013-04-25T15:49:31.190829 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('bower', 'git://github.com/twitter/bower.git')
+I, [2013-04-25T15:49:31.191325 #44016]  INFO -- : (0.000089s) ROLLBACK
+I, [2013-04-25T15:49:31.213686 #44016]  INFO -- : (0.000069s) BEGIN
+E, [2013-04-25T15:49:31.214672 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('session', 'git://github.com/as-jpolo/node-session.git')
+I, [2013-04-25T15:49:31.215138 #44016]  INFO -- : (0.000087s) ROLLBACK
+I, [2013-04-25T15:49:31.237986 #44016]  INFO -- : (0.000070s) BEGIN
+E, [2013-04-25T15:49:31.238980 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('url', 'git://github.com/coolaj86/node.git')
+I, [2013-04-25T15:49:31.239443 #44016]  INFO -- : (0.000087s) ROLLBACK
+I, [2013-04-25T15:49:31.262928 #44016]  INFO -- : (0.000071s) BEGIN
+E, [2013-04-25T15:49:31.263928 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('nodiak', 'git://github.com/nathanaschbacher/nodiak.git')
+I, [2013-04-25T15:49:31.264460 #44016]  INFO -- : (0.000127s) ROLLBACK
+I, [2013-04-25T15:49:31.287040 #44016]  INFO -- : (0.000071s) BEGIN
+E, [2013-04-25T15:49:31.288116 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('nconf', 'git://github.com/flatiron/nconf.git')
+I, [2013-04-25T15:49:31.288607 #44016]  INFO -- : (0.000088s) ROLLBACK
+I, [2013-04-25T15:49:31.323550 #44016]  INFO -- : (0.000233s) BEGIN
+E, [2013-04-25T15:49:31.324632 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('tedious', 'git://github.com/pekim/tedious.git')
+I, [2013-04-25T15:49:31.325119 #44016]  INFO -- : (0.000087s) ROLLBACK
+I, [2013-04-25T15:49:31.346718 #44016]  INFO -- : (0.000071s) BEGIN
+E, [2013-04-25T15:49:31.347768 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('coffeescript', 'git://github.com/jashkenas/coffee-script.git')
+I, [2013-04-25T15:49:31.348266 #44016]  INFO -- : (0.000088s) ROLLBACK
+I, [2013-04-25T15:49:31.370437 #44016]  INFO -- : (0.000068s) BEGIN
+E, [2013-04-25T15:49:31.371444 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('jquery', 'git://github.com/jquery/jquery.git')
+I, [2013-04-25T15:49:31.371920 #44016]  INFO -- : (0.000087s) ROLLBACK
+I, [2013-04-25T15:49:31.394013 #44016]  INFO -- : (0.000072s) BEGIN
+E, [2013-04-25T15:49:31.394996 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('bootstrap', 'git://github.com/twitter/bootstrap.git')
+I, [2013-04-25T15:49:31.395483 #44016]  INFO -- : (0.000087s) ROLLBACK
+I, [2013-04-25T15:49:31.418697 #44016]  INFO -- : (0.000070s) BEGIN
+E, [2013-04-25T15:49:31.419701 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('ember.js', 'git://github.com/emberjs/ember.js.git')
+I, [2013-04-25T15:49:31.420169 #44016]  INFO -- : (0.000087s) ROLLBACK
+I, [2013-04-25T15:49:31.442958 #44016]  INFO -- : (0.000070s) BEGIN
+E, [2013-04-25T15:49:31.443926 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('jquery-ui', 'git://github.com/jquery/jquery-ui.git')
+I, [2013-04-25T15:49:31.444492 #44016]  INFO -- : (0.000088s) ROLLBACK
+I, [2013-04-25T15:49:31.467595 #44016]  INFO -- : (0.000070s) BEGIN
+E, [2013-04-25T15:49:31.468643 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('h5bp', 'git://github.com/h5bp/html5-boilerplate.git')
+I, [2013-04-25T15:49:31.469149 #44016]  INFO -- : (0.000088s) ROLLBACK
+I, [2013-04-25T15:49:31.492251 #44016]  INFO -- : (0.000069s) BEGIN
+E, [2013-04-25T15:49:31.493376 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('h5bp', 'git://github.com/h5bp/html5-boilerplate.git')
+I, [2013-04-25T15:49:31.493837 #44016]  INFO -- : (0.000089s) ROLLBACK
+I, [2013-04-25T15:49:31.515716 #44016]  INFO -- : (0.000072s) BEGIN
+E, [2013-04-25T15:49:31.516772 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('h5bp-mobile', 'git://github.com/h5bp/mobile-boilerplate.git')
+I, [2013-04-25T15:49:31.517305 #44016]  INFO -- : (0.000122s) ROLLBACK
+I, [2013-04-25T15:49:31.539010 #44016]  INFO -- : (0.000072s) BEGIN
+E, [2013-04-25T15:49:31.540017 #44016] ERROR -- : SQLite3::CantOpenException: unable to open database file: INSERT INTO `packages` (`name`, `url`) VALUES ('arm-data-broker', 'https://git.armt.com/smazzucco/arm-data-broker.git')
+I, [2013-04-25T15:49:31.540509 #44016]  INFO -- : (0.000091s) ROLLBACK
+I, [2013-04-25T15:50:09.496686 #44016]  INFO -- : (0.000504s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:51:35.551980 #44016]  INFO -- : (0.000466s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:52:48.791596 #44016]  INFO -- : (0.000467s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T15:52:54.208178 #44016]  INFO -- : (0.000504s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:52:54.208863 #44016]  INFO -- : (0.000091s) BEGIN
+I, [2013-04-25T15:52:54.210198 #44016]  INFO -- : (0.000523s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 1 WHERE (`id` = 1)
+I, [2013-04-25T15:52:54.243987 #44016]  INFO -- : (0.033407s) COMMIT
+I, [2013-04-25T15:53:01.980520 #44016]  INFO -- : (0.000494s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:53:01.981202 #44016]  INFO -- : (0.000091s) BEGIN
+I, [2013-04-25T15:53:01.982415 #44016]  INFO -- : (0.000369s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 2 WHERE (`id` = 1)
+I, [2013-04-25T15:53:02.005735 #44016]  INFO -- : (0.022974s) COMMIT
+I, [2013-04-25T15:54:08.292324 #44016]  INFO -- : (0.000105s) BEGIN
+I, [2013-04-25T15:54:08.293547 #44016]  INFO -- : (0.000399s) INSERT INTO `packages` (`name`, `url`) VALUES ('express', 'git://github.com/visionmedia/express.git')
+I, [2013-04-25T15:54:08.294630 #44016]  INFO -- : (0.000336s) SELECT * FROM `packages` WHERE (`id` = 2) LIMIT 1
+I, [2013-04-25T15:54:08.318257 #44016]  INFO -- : (0.023299s) COMMIT
+I, [2013-04-25T15:54:08.339002 #44016]  INFO -- : (0.000074s) BEGIN
+I, [2013-04-25T15:54:08.339967 #44016]  INFO -- : (0.000342s) INSERT INTO `packages` (`name`, `url`) VALUES ('underscore', 'git://github.com/documentcloud/underscore.git')
+I, [2013-04-25T15:54:08.340949 #44016]  INFO -- : (0.000315s) SELECT * FROM `packages` WHERE (`id` = 3) LIMIT 1
+I, [2013-04-25T15:54:08.363216 #44016]  INFO -- : (0.021946s) COMMIT
+I, [2013-04-25T15:54:08.383612 #44016]  INFO -- : (0.000077s) BEGIN
+I, [2013-04-25T15:54:08.384618 #44016]  INFO -- : (0.000408s) INSERT INTO `packages` (`name`, `url`) VALUES ('socketstream', 'git://github.com/socketstream/socketstream')
+I, [2013-04-25T15:54:08.385627 #44016]  INFO -- : (0.000284s) SELECT * FROM `packages` WHERE (`id` = 4) LIMIT 1
+I, [2013-04-25T15:54:08.409525 #44016]  INFO -- : (0.023561s) COMMIT
+I, [2013-04-25T15:54:08.429592 #44016]  INFO -- : (0.000075s) BEGIN
+I, [2013-04-25T15:54:08.430606 #44016]  INFO -- : (0.000407s) INSERT INTO `packages` (`name`, `url`) VALUES ('ss', 'git://github.com/socketstream/ss-stylus')
+I, [2013-04-25T15:54:08.431586 #44016]  INFO -- : (0.000284s) SELECT * FROM `packages` WHERE (`id` = 5) LIMIT 1
+I, [2013-04-25T15:54:08.453876 #44016]  INFO -- : (0.021971s) COMMIT
+I, [2013-04-25T15:54:08.474487 #44016]  INFO -- : (0.000073s) BEGIN
+I, [2013-04-25T15:54:08.475483 #44016]  INFO -- : (0.000407s) INSERT INTO `packages` (`name`, `url`) VALUES ('node', 'git://github.com/astro/node-expat.git')
+I, [2013-04-25T15:54:08.476456 #44016]  INFO -- : (0.000286s) SELECT * FROM `packages` WHERE (`id` = 6) LIMIT 1
+I, [2013-04-25T15:54:08.497521 #44016]  INFO -- : (0.020756s) COMMIT
+I, [2013-04-25T15:54:08.517033 #44016]  INFO -- : (0.000074s) BEGIN
+I, [2013-04-25T15:54:08.518005 #44016]  INFO -- : (0.000337s) INSERT INTO `packages` (`name`, `url`) VALUES ('redis', 'git://github.com/mranney/node_redis.git')
+I, [2013-04-25T15:54:08.518974 #44016]  INFO -- : (0.000281s) SELECT * FROM `packages` WHERE (`id` = 7) LIMIT 1
+I, [2013-04-25T15:54:08.540055 #44016]  INFO -- : (0.020748s) COMMIT
+I, [2013-04-25T15:54:08.560109 #44016]  INFO -- : (0.000071s) BEGIN
+I, [2013-04-25T15:54:08.561137 #44016]  INFO -- : (0.000372s) INSERT INTO `packages` (`name`, `url`) VALUES ('bower', 'git://github.com/twitter/bower.git')
+I, [2013-04-25T15:54:08.562153 #44016]  INFO -- : (0.000278s) SELECT * FROM `packages` WHERE (`id` = 8) LIMIT 1
+I, [2013-04-25T15:54:08.583933 #44016]  INFO -- : (0.021469s) COMMIT
+I, [2013-04-25T15:54:08.603533 #44016]  INFO -- : (0.000070s) BEGIN
+I, [2013-04-25T15:54:08.604525 #44016]  INFO -- : (0.000337s) INSERT INTO `packages` (`name`, `url`) VALUES ('session', 'git://github.com/as-jpolo/node-session.git')
+I, [2013-04-25T15:54:08.605514 #44016]  INFO -- : (0.000279s) SELECT * FROM `packages` WHERE (`id` = 9) LIMIT 1
+I, [2013-04-25T15:54:08.625887 #44016]  INFO -- : (0.020054s) COMMIT
+I, [2013-04-25T15:54:08.645439 #44016]  INFO -- : (0.000076s) BEGIN
+I, [2013-04-25T15:54:08.646485 #44016]  INFO -- : (0.000443s) INSERT INTO `packages` (`name`, `url`) VALUES ('url', 'git://github.com/coolaj86/node.git')
+I, [2013-04-25T15:54:08.647469 #44016]  INFO -- : (0.000285s) SELECT * FROM `packages` WHERE (`id` = 10) LIMIT 1
+I, [2013-04-25T15:54:08.668826 #44016]  INFO -- : (0.021019s) COMMIT
+I, [2013-04-25T15:54:08.689289 #44016]  INFO -- : (0.000072s) BEGIN
+I, [2013-04-25T15:54:08.690278 #44016]  INFO -- : (0.000402s) INSERT INTO `packages` (`name`, `url`) VALUES ('nodiak', 'git://github.com/nathanaschbacher/nodiak.git')
+I, [2013-04-25T15:54:08.691242 #44016]  INFO -- : (0.000307s) SELECT * FROM `packages` WHERE (`id` = 11) LIMIT 1
+I, [2013-04-25T15:54:08.714482 #44016]  INFO -- : (0.022915s) COMMIT
+I, [2013-04-25T15:54:08.749118 #44016]  INFO -- : (0.000310s) BEGIN
+I, [2013-04-25T15:54:08.750170 #44016]  INFO -- : (0.000374s) INSERT INTO `packages` (`name`, `url`) VALUES ('nconf', 'git://github.com/flatiron/nconf.git')
+I, [2013-04-25T15:54:08.751166 #44016]  INFO -- : (0.000293s) SELECT * FROM `packages` WHERE (`id` = 12) LIMIT 1
+I, [2013-04-25T15:54:08.774625 #44016]  INFO -- : (0.023138s) COMMIT
+I, [2013-04-25T15:54:08.796408 #44016]  INFO -- : (0.000085s) BEGIN
+I, [2013-04-25T15:54:08.797489 #44016]  INFO -- : (0.000351s) INSERT INTO `packages` (`name`, `url`) VALUES ('tedious', 'git://github.com/pekim/tedious.git')
+I, [2013-04-25T15:54:08.798583 #44016]  INFO -- : (0.000396s) SELECT * FROM `packages` WHERE (`id` = 13) LIMIT 1
+I, [2013-04-25T15:54:08.819323 #44016]  INFO -- : (0.020420s) COMMIT
+I, [2013-04-25T15:54:08.840212 #44016]  INFO -- : (0.000082s) BEGIN
+I, [2013-04-25T15:54:08.841381 #44016]  INFO -- : (0.000515s) INSERT INTO `packages` (`name`, `url`) VALUES ('coffeescript', 'git://github.com/jashkenas/coffee-script.git')
+I, [2013-04-25T15:54:08.842721 #44016]  INFO -- : (0.000349s) SELECT * FROM `packages` WHERE (`id` = 14) LIMIT 1
+I, [2013-04-25T15:54:08.865458 #44016]  INFO -- : (0.022385s) COMMIT
+I, [2013-04-25T15:54:08.885536 #44016]  INFO -- : (0.000076s) BEGIN
+I, [2013-04-25T15:54:08.886499 #44016]  INFO -- : (0.000367s) INSERT INTO `packages` (`name`, `url`) VALUES ('jquery', 'git://github.com/jquery/jquery.git')
+I, [2013-04-25T15:54:08.887505 #44016]  INFO -- : (0.000278s) SELECT * FROM `packages` WHERE (`id` = 15) LIMIT 1
+I, [2013-04-25T15:54:08.910127 #44016]  INFO -- : (0.022305s) COMMIT
+I, [2013-04-25T15:54:08.931054 #44016]  INFO -- : (0.000074s) BEGIN
+I, [2013-04-25T15:54:08.931991 #44016]  INFO -- : (0.000342s) INSERT INTO `packages` (`name`, `url`) VALUES ('bootstrap', 'git://github.com/twitter/bootstrap.git')
+I, [2013-04-25T15:54:08.933006 #44016]  INFO -- : (0.000320s) SELECT * FROM `packages` WHERE (`id` = 16) LIMIT 1
+I, [2013-04-25T15:54:08.956157 #44016]  INFO -- : (0.022765s) COMMIT
+I, [2013-04-25T15:54:08.976401 #44016]  INFO -- : (0.000071s) BEGIN
+I, [2013-04-25T15:54:08.977452 #44016]  INFO -- : (0.000385s) INSERT INTO `packages` (`name`, `url`) VALUES ('ember.js', 'git://github.com/emberjs/ember.js.git')
+I, [2013-04-25T15:54:08.978473 #44016]  INFO -- : (0.000325s) SELECT * FROM `packages` WHERE (`id` = 17) LIMIT 1
+I, [2013-04-25T15:54:09.003308 #44016]  INFO -- : (0.024516s) COMMIT
+I, [2013-04-25T15:54:09.023016 #44016]  INFO -- : (0.000074s) BEGIN
+I, [2013-04-25T15:54:09.024020 #44016]  INFO -- : (0.000382s) INSERT INTO `packages` (`name`, `url`) VALUES ('jquery-ui', 'git://github.com/jquery/jquery-ui.git')
+I, [2013-04-25T15:54:09.025029 #44016]  INFO -- : (0.000338s) SELECT * FROM `packages` WHERE (`id` = 18) LIMIT 1
+I, [2013-04-25T15:54:09.049936 #44016]  INFO -- : (0.024407s) COMMIT
+I, [2013-04-25T15:54:09.076128 #44016]  INFO -- : (0.000083s) BEGIN
+I, [2013-04-25T15:54:09.077277 #44016]  INFO -- : (0.000397s) INSERT INTO `packages` (`name`, `url`) VALUES ('h5bp', 'git://github.com/h5bp/html5-boilerplate.git')
+I, [2013-04-25T15:54:09.078289 #44016]  INFO -- : (0.000294s) SELECT * FROM `packages` WHERE (`id` = 19) LIMIT 1
+I, [2013-04-25T15:54:09.101230 #44016]  INFO -- : (0.022618s) COMMIT
+I, [2013-04-25T15:54:09.122956 #44016]  INFO -- : (0.000081s) BEGIN
+E, [2013-04-25T15:54:09.124124 #44016] ERROR -- : SQLite3::ConstraintException: column url is not unique: INSERT INTO `packages` (`name`, `url`) VALUES ('h5bp', 'git://github.com/h5bp/html5-boilerplate.git')
+I, [2013-04-25T15:54:09.124630 #44016]  INFO -- : (0.000089s) ROLLBACK
+I, [2013-04-25T15:54:09.147343 #44016]  INFO -- : (0.000074s) BEGIN
+I, [2013-04-25T15:54:09.148301 #44016]  INFO -- : (0.000365s) INSERT INTO `packages` (`name`, `url`) VALUES ('h5bp-mobile', 'git://github.com/h5bp/mobile-boilerplate.git')
+I, [2013-04-25T15:54:09.149362 #44016]  INFO -- : (0.000392s) SELECT * FROM `packages` WHERE (`id` = 20) LIMIT 1
+I, [2013-04-25T15:54:09.171813 #44016]  INFO -- : (0.022128s) COMMIT
+I, [2013-04-25T15:54:09.191756 #44016]  INFO -- : (0.000076s) BEGIN
+E, [2013-04-25T15:54:09.192790 #44016] ERROR -- : SQLite3::ConstraintException: column url is not unique: INSERT INTO `packages` (`name`, `url`) VALUES ('arm-data-broker', 'https://git.armt.com/smazzucco/arm-data-broker.git')
+I, [2013-04-25T15:54:09.193302 #44016]  INFO -- : (0.000090s) ROLLBACK
+I, [2013-04-25T15:54:11.056378 #44016]  INFO -- : (0.000455s) SELECT * FROM `packages` WHERE (`name` = 'arm-data-broker') LIMIT 1
+I, [2013-04-25T15:54:11.057025 #44016]  INFO -- : (0.000088s) BEGIN
+I, [2013-04-25T15:54:11.058260 #44016]  INFO -- : (0.000376s) UPDATE `packages` SET `name` = 'arm-data-broker', `url` = 'https://git.armt.com/smazzucco/arm-data-broker.git', `created_at` = NULL, `hits` = 3 WHERE (`id` = 1)
+I, [2013-04-25T15:54:11.080388 #44016]  INFO -- : (0.021751s) COMMIT
+I, [2013-04-25T15:54:14.384056 #44016]  INFO -- : (0.000904s) SELECT * FROM `packages` ORDER BY `name`
+I, [2013-04-25T16:08:28.113551 #45458]  INFO -- : (0.000270s) PRAGMA foreign_keys = 1
+I, [2013-04-25T16:08:28.113752 #45458]  INFO -- : (0.000029s) PRAGMA case_sensitive_like = 1
+I, [2013-04-25T16:08:28.114007 #45458]  INFO -- : (0.000126s) SELECT NULL FROM `packages` LIMIT 1
+I, [2013-04-25T16:08:28.114500 #45458]  INFO -- : (0.000067s) SELECT sqlite_version() LIMIT 1
+I, [2013-04-25T16:08:28.114844 #45458]  INFO -- : (0.000058s) CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+E, [2013-04-25T16:08:28.115083 #45458] ERROR -- : SQLite3::SQLException: index migrations_name_index already exists: CREATE INDEX `migrations_name_index` ON `migrations` (`name`)
+I, [2013-04-25T16:08:28.115514 #45458]  INFO -- : (0.000120s) SELECT COUNT(*) AS 'count' FROM `migrations` WHERE (`name` = 'create packages') LIMIT 1
+I, [2013-04-25T16:08:28.115786 #45458]  INFO -- : (0.000043s) CREATE TABLE IF NOT EXISTS `migrations` (`id` integer PRIMARY KEY AUTOINCREMENT, `name` text NOT NULL, `ran_at` timestamp)
+E, [2013-04-25T16:08:28.115998 #45458] ERROR -- : SQLite3::SQLException: index migrations_name_index already exists: CREATE INDEX `migrations_name_index` ON `migrations` (`name`)
+I, [2013-04-25T16:08:28.116350 #45458]  INFO -- : (0.000099s) SELECT COUNT(*) AS 'count' FROM `migrations` WHERE (`name` = 'add hits') LIMIT 1

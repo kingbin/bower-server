@@ -12,44 +12,70 @@ require 'json'
 require 'sequel'
 require 'sinatra/sequel'
 
-migration 'create packages' do
-  database.create_table :packages do
-    primary_key :id
-    String :name, :unique => true, :null => false
-    String :url, :unique => true, :null => false
-    DateTime :created_at
-    index :name
-  end
-end
+#require 'padrino-helpers'
+#require 'logger'
 
-migration 'add hits' do
-  database.alter_table :packages do
-    add_column :hits, Integer, :default => 0
-  end
-end
+#require "rack/oauth2/sinatra"
 
-class Package < Sequel::Model
-  def hit!
-    self.hits += 1
-    self.save(:validate => false)
-  end
+#  register Rack::OAuth2::Sinatra
+#
+#  oauth.database = Mongo::Connection.new["bower_admin"]
+#  oauth.authenticator = lambda do |username, password|
+#    #user = User.find(username)
+#    #user if user && user.authenticated?(password)
+#    user = User.find_by_username(username)
+#    user.id if user && user.authenticated?(password)
+#  end
+#
+#
+#  get "/oauth/authorize" do
+#    if current_user
+#      render "oauth/authorize"
+#    else
+#      redirect "/oauth/login?authorization=#{oauth.authorization}"
+#    end
+#  end
+#
+#  post "/oauth/grant" do
+#    oauth.grant! "Superman"
+#  end
+#
+#  post "/oauth/deny" do
+#    oauth.deny!
+#  end
+#
+#  before do
+#    @current_user = User.find(oauth.identity) if oauth.authenticated?
+#  end
+#
+#  oauth_required "/packages/d"
 
-  def validate
-    super
-    errors.add(:url, 'is not correct format') if url !~ /^git:\/\//
-  end
+set :root_path, File.dirname(__FILE__)
 
-  def as_json
-    {:name => name, :url => url}
-  end
+require File.expand_path('../config/init', __FILE__)
 
-  def to_json(*)
-    as_json.to_json
-  end
+get '/' do
+ @msg = "ARMtech Bower Server"
+ @date = Time.now
+ erb :index
 end
 
 get '/packages' do
   Package.order(:name).all.to_json
+end
+
+get '/packages/:name' do
+  package  = Package[:name => params[:name]]
+
+  return 404 unless package
+
+  package.hit!
+  package.to_json
+end
+
+get '/packages/search/:name' do
+  packages = Package.filter(:name.ilike("%#{params[:name]}%")).order(:hits.desc)
+  packages.all.to_json
 end
 
 post '/packages' do
@@ -66,16 +92,20 @@ post '/packages' do
   end
 end
 
-get '/packages/:name' do
-  package  = Package[:name => params[:name]]
-
-  return 404 unless package
-
-  package.hit!
-  package.to_json
+delete '/packages' do
+  begin
+    package = Package[:name => params[:name]].destroy()
+    201
+  rescue Sequel::ValidationFailed
+    400
+  rescue Sequel::DatabaseError
+    406
+  end
 end
 
-get '/packages/search/:name' do
-  packages = Package.filter(:name.ilike("%#{params[:name]}%")).order(:hits.desc)
-  packages.all.to_json
-end
+
+
+
+
+
+

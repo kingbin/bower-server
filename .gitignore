@@ -1,2 +1,8 @@
 development.db
 production.db
+
+vendor/
+.bundle/
+node_modules/
+Gemfile.lock
+
